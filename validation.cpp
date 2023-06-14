@@ -47,6 +47,7 @@ class IP{
             if(stoi(ip[0]) >= 240 && stoi(ip[0]) <= 255){return "Class E";}
             else{ return "Error"; }
         }
+        else{ return "Error"; }
     }
 
 
