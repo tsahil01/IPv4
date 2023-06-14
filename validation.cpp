@@ -8,6 +8,7 @@ class IP{
     string addr;
     string msg="";
     size_t dot;
+    int error = 0;
 
     public:
     IP(string addr){
@@ -33,16 +34,19 @@ class IP{
                 return "Not a valid IP address!!";
             }
         }
+        error = 1;
         return "Valid IP address!!";
     }
 
     string findClass(){
-        if(stoi(ip[0]) >= 0 && stoi(ip[0]) <= 127){return "Class A";}
-        if(stoi(ip[0]) >= 128 && stoi(ip[0]) <= 191){return "Class B";}
-        if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return "Class C";}
-        if(stoi(ip[0]) >= 224 && stoi(ip[0]) <= 239){return "Class D";}
-        if(stoi(ip[0]) >= 240 && stoi(ip[0]) <= 255){return "Class E";}
-        else{ return "Error"; }
+        if(error == 1){
+            if(stoi(ip[0]) >= 0 && stoi(ip[0]) <= 127){return "Class A";}
+            if(stoi(ip[0]) >= 128 && stoi(ip[0]) <= 191){return "Class B";}
+            if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return "Class C";}
+            if(stoi(ip[0]) >= 224 && stoi(ip[0]) <= 239){return "Class D";}
+            if(stoi(ip[0]) >= 240 && stoi(ip[0]) <= 255){return "Class E";}
+            else{ return "Error"; }
+        }
     }
 
 
