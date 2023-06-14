@@ -47,6 +47,7 @@ class IP{
             if(stoi(ip[0]) >= 240 && stoi(ip[0]) <= 255){return "Class E";}
             else {return "Error";}
         }
+        else {return "Error";}
 
     }
 
@@ -58,6 +59,7 @@ class IP{
             if(stoi(ip[0])>=224){return ip[0] + "." + (ip[1]) + "." + (ip[2]) +  ".";}
             else {return "Error";}
         }
+        else {return "Error";}
     }
 
     string Laddress(){
@@ -68,6 +70,7 @@ class IP{
             if(stoi(ip[0])>=224){return ip[0] + "." + (ip[1]) + "." + (ip[2]) +  ".255";}
             else {return "Error";}
         }
+        else {return "Error";}
     }
 
     int Taddress(){
@@ -78,6 +81,7 @@ class IP{
             if(stoi(ip[0])>=224){return 255;}
             else {return 0;}
         }
+        else {return 0;}
     }
 
 };
