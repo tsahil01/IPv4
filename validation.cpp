@@ -42,6 +42,7 @@ class IP{
         if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return "Class C";}
         if(stoi(ip[0]) >= 224 && stoi(ip[0]) <= 239){return "Class D";}
         if(stoi(ip[0]) >= 240 && stoi(ip[0]) <= 255){return "Class E";}
+        else{ return "Error"; }
     }
 
 

@@ -42,6 +42,7 @@ class IP{
         if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return "Class C";}
         if(stoi(ip[0]) >= 224 && stoi(ip[0]) <= 239){return "Class D";}
         if(stoi(ip[0]) >= 240 && stoi(ip[0]) <= 255){return "Class E";}
+        else {return "Error";}
     }
 
     string Faddress(){
@@ -49,6 +50,7 @@ class IP{
         if(stoi(ip[0]) >= 128 && stoi(ip[0]) <= 191){return ip[0] + "." + (ip[1]) +  ".1.1";}
         if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return ip[0] + "." + (ip[1]) + "." + (ip[2]) +  ".1";}
         if(stoi(ip[0])>=224){return ip[0] + "." + (ip[1]) + "." + (ip[2]) +  ".";}
+        else {return "Error";}
     }
 
     string Laddress(){
@@ -56,6 +58,7 @@ class IP{
         if(stoi(ip[0]) >= 128 && stoi(ip[0]) <= 191){return ip[0] + "." + ip[1] +  ".255.255";}
         if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return ip[0] + "." + (ip[1]) + "." + (ip[2]) +  ".255";}
         if(stoi(ip[0])>=224){return ip[0] + "." + (ip[1]) + "." + (ip[2]) +  ".255";}
+        else {return "Error";}
     }
 
     int Taddress(){
@@ -63,6 +66,7 @@ class IP{
         if(stoi(ip[0]) >= 128 && stoi(ip[0]) <= 191){return 255*255;}
         if(stoi(ip[0]) >= 192 && stoi(ip[0]) <= 223){return 255;}
         if(stoi(ip[0])>=224){return 255;}
+        else {return 0;}
     }
 
 };
